@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Details</title>
+</head>
+<body>
+
+<h1>Movie Details</h1>
+
+<h2 id="movieName"></h2>
+
+<p>This is an action movie with excellent reviews.</p>
+
+<a href="booking.html">
+    <button>Book Seat</button>
+</a>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const movie = params.get("movie");
+
+document.getElementById("movieName").innerHTML = movie;
+
+localStorage.setItem("movie", movie);
+</script>
+
+</body>
+</html>
